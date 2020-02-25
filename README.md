@@ -2,8 +2,29 @@
 Data and code repository to evaluate multilingual fairness for hate speech detection for the LREC 2020 paper [Multilingual Twitter corpus and baselines for evaluating demographic bias in hate speech recognition](https://arxiv.org/pdf/2002.10361.pdf).
 
 
+# How to run evaluations
+1. Install required packages;
+    * Install conda;
+    * Install pytorch;
+    * Final: `pip install -r requirements.txt`.
+
+2. Process pre-trained word embeddings;
+    * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/emb_steps.md).
+
+3. Run python scripts
+    * Test logistic regression classifier: `python lr.py`;
+    * Test RNN classifier: `python rnn.py`;
+    * Test CNN classifier: `python cnn.py`;
+    * Test BERT classifier: `python bert.py`.
+
+
+# Contact
+To request non-binary demographic labels or if you have any issues,
+please email **xiaolei.huang@colorado.edu**.
+
+
 # Citation
-If you use our corpus in your publication, please cite this [paper](https://arxiv.org/pdf/2002.10361.pdf)):
+If you use our corpus in your publication, please kindly cite this [paper](https://arxiv.org/pdf/2002.10361.pdf)):
 
 ```
 @inproceedings{huang2020-lrec,

@@ -1,0 +1,45 @@
+# word2vec - English
+https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit
+# cite: https://github.com/Kyubyong/wordvectors
+# word2vec - Spanish
+https://drive.google.com/file/d/0B0ZXk88koS2KNGNrTE4tVXRUZFU/view
+# word2vec - Polish
+https://drive.google.com/open?id=0B0ZXk88koS2KbFlmMy1PUHBSZ0E
+# word2vec - Portuguese
+https://drive.google.com/open?id=0B0ZXk88koS2KRDcwcV9IVWFTeUE
+# word2vec - Italian
+https://drive.google.com/open?id=0B0ZXk88koS2KTlM3Qm1Ta2FBaTg
+
+# private (from different papers) word2vec
+# Italian: http://hlt.isti.cnr.it/wordembeddings/
+# Polish: https://github.com/sdadas/polish-nlp-resources
+# Spanish: https://github.com/dccuchile/spanish-word-embeddings
+# Portuguese: http://nilc.icmc.usp.br/embeddings
+
+# fasttext - English
+https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.en.300.vec.gz
+# fasttext - Spanish
+https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.es.300.vec.gz
+# fasttext - Polish
+https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.vec.gz
+# fasttext - Portuguese
+https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pt.300.vec.gz
+# fasttext - Italian
+https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.it.300.vec.gz
+
+
+# Twitter
+# Leveraging Large Amounts of Weakly Supervised Data for Multi-Language Sentiment Classiﬁcation by Jan Deriu, Aurelien Lucchi, Valeria De Luca, Aliaksei Severyn, Simon Müller, Mark Cieliebak, Thomas Hoffmann, and Martin Jaggi. In “Proceedings of the 26th International World Wide Web Conference (WWW-2017), Perth, Australia, 2017
+
+# Spanish, 
+http://4530.hostserv.eu/resources/embed_tweets_es_200M_200D.zip
+# Italian
+http://4530.hostserv.eu/resources/embed_tweets_it_200M_200D.zip
+
+# Godin, F., Vandersmissen, B., De Neve, W., & Van de Walle, R. (2015). Multimedia Lab @ ACL W-NUT NER shared task: Named entity recognition for Twitter microposts using distributed word representations. Workshop on Noisy User-generated Text, ACL 2015.
+# English
+https://drive.google.com/file/d/10B7cvx3xN7Ef_FxwIO8sigd1J1Ibe6Lu/view
+
+# Portuguese
+
+# Polish
