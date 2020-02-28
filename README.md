@@ -1,21 +1,50 @@
 # Multilingual_Fairness_LREC
-Data and code repository to evaluate multilingual fairness for hate speech detection for the LREC 2020 paper [Multilingual Twitter corpus and baselines for evaluating demographic bias in hate speech recognition](https://arxiv.org/pdf/2002.10361.pdf).
+Data and code repository to evaluate multilingual fairness for hate speech detection for the LREC 2020 paper [Multilingual Twitter Corpus and Baselines for Evaluating Demographic Bias in Hate Speech Recognition](https://arxiv.org/pdf/2002.10361.pdf).
 
 
-# How to run evaluations
+# Data
+1. Languages
+    * English
+    * Italian
+    * Polish
+    * Portugese
+    * Spanish
+    * Hinglish (to be added)
+    * **More languages in the future**
+
+2. Short Description
+This multilingual dataset convers five languages for the hate speech detection task.
+Each dataset contains five author level demographic attributes: age, country, gender and race/ethinicity.
+We binarize each attribute for simplifying analysis and experiments below.
+For the non-binary attribute labels, we are open to share for research community upon request.
+
+* Age: if larger than the median value within each language data;
+* Country: first identify a country value has the major users, then binarize the attribute if user is from the country value;
+* Gender: male or female;
+* Race/Ethnicity: we first extract the attributes using four American major race groups, White, Black, Hispanic/Latino and Asian; we then tentatively binarize the race label into white and other groups.
+
+
+
+
+# How to Run
 1. Install required packages;
-    * Install conda;
-    * Install pytorch;
-    * Final: `pip install -r requirements.txt`.
+  * Install [conda](https://www.anaconda.com/distribution/);
+  * Install [PyTorch](https://pytorch.org/get-started/locally/);
+  * Install packages:
+    * With conda: `conda env create -f environment.yml`, then `conda activate lrec2020`
+    * With pip: `pip install -r requirements.txt`.
 
 2. Process pre-trained word embeddings;
-    * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/emb_steps.md).
+  * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/emb_steps.md).
 
 3. Run python scripts
-    * Test logistic regression classifier: `python lr.py`;
-    * Test RNN classifier: `python rnn.py`;
-    * Test CNN classifier: `python cnn.py`;
-    * Test BERT classifier: `python bert.py`.
+  * Run analysis on the dataset:
+    * `cd ./analysis`
+    * `python predictability.py`
+  * Test logistic regression classifier: `python lr.py`;
+  * Test RNN classifier: `python rnn.py`;
+  * Test CNN classifier: `python cnn.py`;
+  * Test BERT classifier: `python bert.py`.
 
 
 # Contact
