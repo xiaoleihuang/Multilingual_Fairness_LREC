@@ -3,7 +3,7 @@ Data and code repository to evaluate multilingual fairness for hate speech detec
 
 
 # Data
-1. Languages
+* Languages
     * English
     * Italian
     * Polish
@@ -27,20 +27,21 @@ For the non-binary attribute labels, we are open to share for research community
 
 
 # How to Run
-1. Install required packages;
+* Install required packages;
   * Install [conda](https://www.anaconda.com/distribution/);
   * Install [PyTorch](https://pytorch.org/get-started/locally/);
   * Install packages:
     * With conda: `conda env create -f environment.yml`, then `conda activate lrec2020`
     * With pip: `pip install -r requirements.txt`.
 
-2. Process pre-trained word embeddings;
-  * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/emb_steps.md).
+* Process pre-trained word embeddings;
+  * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/readme.md).
 
-3. Run python scripts
+* Run python scripts
   * Run analysis on the dataset:
     * `cd ./analysis`
     * `python predictability.py`
+  * Preprocess the data: `python preprocess.py`
   * Test logistic regression classifier: `python lr.py`;
   * Test RNN classifier: `python rnn.py`;
   * Test CNN classifier: `python cnn.py`;

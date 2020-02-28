@@ -1,0 +1,2 @@
+1. Download the embeddings into the embedding folder. You can refer to the available pre-trained embeddings in the [embedding_urls.txt](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/embedding_urls.txt)
+2. unzip the embedding files, rename the embedding files to its Language names. For example, `gunzip es.vec.zip > Spanish.vec`. **Noted** that we only accept the embedding file ends as *.vec* or *.bin*. But you are welcome to update `preprocess.py` to support more embedding format.
