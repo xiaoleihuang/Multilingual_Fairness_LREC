@@ -320,6 +320,11 @@ if __name__ == '__main__':
         'Portuguese', 'Spanish',
     ]
     
+    # create resources folders
+    for dirp in ['./resources/tokenizer/', './resources/embedding/', './resources/weight/']:
+        if not os.path.exists(dirp):
+            os.mkdir(dirp)
+    
     for dirp in dir_list:
         raw_dir = './data/raw/'+dirp+'/'
         anonymize_dir = './data/anonymize/'+dirp+'/'
