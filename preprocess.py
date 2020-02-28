@@ -369,6 +369,3 @@ if __name__ == '__main__':
             build_wt(dirp, tok, emb_path + '.vec', opt)
         else:
             build_wt(dirp, tok, emb_path + '.bin', opt)
-#        emb_path = emb_dir + 'english.bin'
-#        build_wt(dirp, tok, emb_dir, opt)
-
