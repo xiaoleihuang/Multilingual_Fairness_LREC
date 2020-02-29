@@ -1,4 +1,4 @@
-# Multilingual_Fairness_LREC
+# Multilingual Fairness LREC
 Data and code repository to evaluate multilingual fairness for hate speech detection for the LREC 2020 paper [Multilingual Twitter Corpus and Baselines for Evaluating Demographic Bias in Hate Speech Recognition](https://arxiv.org/pdf/2002.10361.pdf).
 
 
@@ -27,17 +27,16 @@ For the non-binary attribute labels, we are open to share for research community
 
 
 # How to Run
-* Install required packages;
+* Install the following:;
   * Install [conda](https://www.anaconda.com/distribution/);
-  * Install [PyTorch](https://pytorch.org/get-started/locally/);
-  * Install packages:
+  * Install Python packages:
     * With conda: `conda env create -f environment.yml`, then `conda activate lrec2020`
     * With pip: `pip install -r requirements.txt`.
 
 * Process pre-trained word embeddings;
   * Follow the [instructions](https://github.com/xiaoleihuang/Multilingual_Fairness_LREC/blob/master/resources/readme.md).
 
-* Run python scripts
+* Run Python scripts
   * Run analysis on the dataset:
     * `cd ./analysis`
     * `python predictability.py`
@@ -54,7 +53,7 @@ please email **xiaolei.huang@colorado.edu**.
 
 
 # Citation
-If you use our corpus in your publication, please kindly cite this [paper](https://arxiv.org/pdf/2002.10361.pdf)):
+If you use our corpus in your publication, please kindly cite this [paper](https://arxiv.org/pdf/2002.10361.pdf):
 
 ```
 @inproceedings{huang2020-lrec,
