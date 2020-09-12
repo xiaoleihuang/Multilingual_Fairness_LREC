@@ -97,7 +97,7 @@ def build_bert(lang, odir, params=None):
         train_df = train_df.reset_index() # to prevent index key error
 
         valid_df = pd.read_csv(split_dir+'valid.tsv', sep='\t', na_values='x')
-        test_df = pd.read_csv(split_dir+'train.tsv', sep='\t', na_values='x')
+        test_df = pd.read_csv(split_dir+'test.tsv', sep='\t', na_values='x')
         data_df = [train_df, valid_df, test_df]
 
     # We need to add special tokens at the beginning and end of each sentence for BERT to work properly
