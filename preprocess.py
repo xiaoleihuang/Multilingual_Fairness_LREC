@@ -217,19 +217,19 @@ def split_data(idir, odir):
     with open(trainp, 'w') as wfile:
         wfile.write(cols)
         for idx in range(int(len(indices)*.7)):
-            wfile.write(corpus[idx])
+            wfile.write(corpus[indices[idx]])
 
     # valid
     with open(validp, 'w') as wfile:
         wfile.write(cols)
         for idx in range(int(len(indices)*.7), int(len(indices)*.85)):
-            wfile.write(corpus[idx])
+            wfile.write(corpus[indices[idx]])
 
     # test
     with open(testp, 'w') as wfile:
         wfile.write(cols)
         for idx in range(int(len(indices)*.85), len(indices)):
-            wfile.write(corpus[idx])
+            wfile.write(corpus[indices[idx]])
 
 
 def build_indices(split_dir, tok, indices_dir, max_len=40):
