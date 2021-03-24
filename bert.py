@@ -1,4 +1,4 @@
-'''Build Bert document classifier, the code is revised from 
+'''Build Bert document classifier, the code is revised from
 https://colab.research.google.com/drive/1ywsvwO6thOVOrfagjjfuxEf6xVRxbUNO#scrollTo=6J-FYdx6nFE_
 
 '''
@@ -106,17 +106,17 @@ def build_bert(lang, odir, params=None):
 
     if lang == 'English':
         tokenizer = BertTokenizer.from_pretrained(
-            'bert-base-uncased', 
+            'bert-base-uncased',
             do_lower_case=True
         )
     elif lang == 'Chinese':
         tokenizer = BertTokenizer.from_pretrained(
-            'bert-base-chinese', 
+            'bert-base-chinese',
             do_lower_case=True
         )
     else:
         tokenizer = BertTokenizer.from_pretrained(
-            'bert-base-multilingual-uncased', 
+            'bert-base-multilingual-uncased',
             do_lower_case=True
         )
 
@@ -197,12 +197,12 @@ def build_bert(lang, odir, params=None):
     ]
     optimizer = AdamW(optimizer_grouped_parameters, lr=params['lr'])
     scheduler = get_linear_schedule_with_warmup(
-        optimizer, num_warmup_steps=params['warm_steps'], 
+        optimizer, num_warmup_steps=params['warm_steps'],
         num_training_steps=params['train_steps']
     )
 
     # Number of training epochs (authors recommend between 2 and 4)
-    epochs = 10 
+    epochs = 10
 
     # Training
     print('Training the model...')
@@ -222,7 +222,7 @@ def build_bert(lang, odir, params=None):
             optimizer.zero_grad()
             # Forward pass
             outputs = model(
-                b_input_ids, token_type_ids=None, 
+                b_input_ids, token_type_ids=None,
                 attention_mask=b_input_mask, labels=b_labels
             )
             # backward pass
@@ -230,6 +230,7 @@ def build_bert(lang, odir, params=None):
             outputs.backward()
             # Update parameters and take a step using the computed gradient
             optimizer.step()
+            scheduler.step()
 
             # Update tracking variables
             tr_loss += outputs[0].item()
@@ -257,8 +258,8 @@ def build_bert(lang, odir, params=None):
             with torch.no_grad():
                 # Forward pass, calculate logit predictions
                 outputs = model(
-                    b_input_ids, 
-                    token_type_ids=None, 
+                    b_input_ids,
+                    token_type_ids=None,
                     attention_mask=b_input_mask)
             # Move logits and labels to CPU
             logits = outputs[0].detach().cpu().numpy()
@@ -268,7 +269,7 @@ def build_bert(lang, odir, params=None):
 
             label_ids = b_labels.to('cpu').numpy()
             tmp_eval_accuracy = flat_accuracy(logits, label_ids)
-        
+
             eval_accuracy += tmp_eval_accuracy
             nb_eval_steps += 1
 
@@ -288,8 +289,8 @@ def build_bert(lang, odir, params=None):
                 b_input_ids, b_input_mask, b_labels = batch
                 with torch.no_grad():
                     outputs = model(
-                        b_input_ids, 
-                        token_type_ids=None, 
+                        b_input_ids,
+                        token_type_ids=None,
                         attention_mask=b_input_mask)
                 probs = F.softmax(outputs[0], dim=1)
                 probs = probs.detach().cpu().numpy()
@@ -306,14 +307,14 @@ def build_bert(lang, odir, params=None):
 
             # save the predicted results
             evaluator.eval(
-                odir+lang+'.tsv', 
+                odir+lang+'.tsv',
                 odir+lang+'.score'
             )
-    
+
 
 if __name__ == '__main__':
     langs = [
-        'English', 'Italian', 'Polish', 
+        'English', 'Italian', 'Polish',
         'Portuguese', 'Spanish'
     ]
     odir = './results/bert/'
