@@ -129,5 +129,8 @@ dmypy.json
 .pyre/
 
 /data/raw/
+/data/split/
+/data/encode/
+/data/anonymize/
 /resources/embedding/
 /resources/weight/
