@@ -3,6 +3,8 @@ Data and code repository to evaluate multilingual fairness for hate speech detec
 
 
 # Data
+***Email xiaolei.huang@memphis.edu to get anonymized text corpus.***
+
 * Languages
     * English
     * Italian
